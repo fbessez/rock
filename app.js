@@ -29,7 +29,7 @@ function win(userChoice, computerChoice) {
   userScore++;
   userScore_span.innerHTML = userScore;
   computerScore_span.innerHTML = computerScore
-  result_p.innerHTML = `${convertToWord(userChoice)} beats ${convertToWord(computerChoice)}. You win!`;
+  result_p.innerHTML = `${convertToWord(userChoice)} beats ${convertToWord(computerChoice)}. You won...but you are not manly!`;
   applyGlow(userChoice, 'green-glow')
 }
 
@@ -37,14 +37,14 @@ function lose(userChoice, computerChoice) {
   computerScore++;
   userScore_span.innerHTML = userScore;
   computerScore_span.innerHTML = computerScore
-  result_p.innerHTML = `${convertToWord(userChoice)} loses to ${convertToWord(computerChoice)}. You lose!`;
+  result_p.innerHTML = `${convertToWord(userChoice)} loses to ${convertToWord(computerChoice)}. You lost...and you are not manly!`;
   applyGlow(userChoice, 'red-glow')
 }
 
 function tie(userChoice, computerChoice) {
   userScore_span.innerHTML = userScore;
   computerScore_span.innerHTML = computerScore
-  result_p.innerHTML = `${convertToWord(userChoice)} ties with ${convertToWord(computerChoice)}. You suck...`;
+  result_p.innerHTML = "Well done! You are manly!";
   applyGlow(userChoice, 'gray-glow')
 }
 

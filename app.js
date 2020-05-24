@@ -8,13 +8,13 @@ const paper_div = document.getElementById("p");
 const scissors_div = document.getElementById("s");
 
 function getComputerChoice() {
-  const choices = ['r', 'p', 's']
+  const choices = ["r", "p", "s"]
   return choices[0]
 }
 
 function convertToWord(letter) {
-  if (letter == "r") return "ROCK";
-  if (letter == "s") return "PAPER";
+  if (letter === "r") return "ROCK";
+  if (letter === "p") return "PAPER";
   return "SCISSORS";
 }
 
@@ -55,19 +55,16 @@ function game(userChoice) {
     case "pr":
     case "sp":
       win(userChoice, computerChoice);
-      console.log("You win!");
       break;
     case "rp":
     case "ps":
     case "sr":
       lose(userChoice, computerChoice)
-      console.log("You lost. SMH.");
       break;
     case "rr":
     case "ss":
     case "pp":
       tie(userChoice, computerChoice)
-      console.log("You tied");
       break;
   }
 }
